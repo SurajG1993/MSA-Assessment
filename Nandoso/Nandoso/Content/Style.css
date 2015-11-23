@@ -1,0 +1,45 @@
+﻿body {
+    background-color:lightyellow;
+}
+
+h1{
+//    background-color:lightgray;
+    padding: 0px;
+    margin:0px;
+    color:red
+}
+
+p{
+    margin:10px;
+    padding:10px;
+    font-size:25px;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color:black;
+}
+
+.backgroundWall{ /* Background for webpages*/
+	position:fixed;
+	width:100%;
+	height:100%;
+	margin:0px;
+	padding:0px;
+	border:0px;
+	z-index:-1;
+	opacity:0.4;
+}
+
+
+
+.navbar.center .navbar-inner {
+    text-align: center;
+}
+
+.navbar.center .navbar-inner .nav {
+    display:inline-block;
+    float: none;
+}
+
+.navbar-brand {
+    align-content:center
+    text-align:center
+}
