@@ -1,5 +1,6 @@
 ﻿body {
     background-color:lightyellow;
+    margin:0px;
 }
 
 h1{
@@ -15,6 +16,14 @@ p{
     font-size:25px;
     font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     color:black;
+}
+
+.chatbox {
+ //   background-color: #99CCFF;
+ //   border: thick solid #808080;
+    padding: 20px;
+    margin: 20px;
+    text-align:center
 }
 
 .backgroundWall{ /* Background for webpages*/
