@@ -1,0 +1,50 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>Nandoso</title>
+    <meta charset="utf-8" />
+    <script src="Scripts/jquery-2.1.4.min.js"></script>
+    <script src="Scripts/bootstrap.min.js"></script>
+    <script src="Scripts/FeedbackReplyModule.js"></script>
+    <script src="Scripts/FeedbackReply.js"></script>
+    <link href="Content/bootstrap.min.css" rel="stylesheet" />
+    <link href="Content/Style.css" rel="stylesheet" />
+</head>
+<body>
+    <div class="backgroundWall">
+        <img src="Images/Chicken.jpg" height="100%" width="100%" />
+    </div>
+    <div>
+        <header>
+            <h1 align="center">Nandoso</h1>
+        </header>
+    </div>
+    <div>
+        <nav class="navbar navbar-inverse">
+            <div class="container-fluid">
+                <div>
+                    <a href="index.html" class="navbar-brand">Home</a>
+                    <a href="specials.html" class="navbar-brand">Specials</a>
+                    <a href="liveChat.html" class="navbar-brand">Live Chat</a>
+                </div>
+            </div>
+        </nav>
+    </div>
+    <div>
+        <p>
+            Nandoso is an international casual dining restaurant chain, operated by franchisees, that specializes in flame-grilled chicken.
+        <p>
+            <textarea id="FeedbackText" cols="100" rows="5"></textarea>
+            <button onclick="submitFeedback()">Reply</button>
+            <table class="table table-striped space-table">
+                <thead>
+                    <tr>
+                        <th> User Name </th>
+                        <th> Message</th>
+                    </tr>
+                </thead>
+                <tbody id="ReplyList"></tbody>
+            </table>
+    </div>
+</body>
+</html>

@@ -143,6 +143,7 @@
     <Content Include="Content\bootstrap.css.map" />
     <Content Include="Content\bootstrap-theme.css.map" />
     <Content Include="LiveChat.html" />
+    <Content Include="replies.html" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <None Include="Scripts\jquery-2.1.4.intellisense.js" />
@@ -172,8 +173,8 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Models\ForumReplies.cs" />
     <Compile Include="Models\ForumPost.cs" />
+    <Compile Include="Models\ForumReplies.cs" />
     <Compile Include="Models\MenuModel.cs" />
     <Compile Include="Models\NandosoContext.cs" />
     <Compile Include="Models\SpecialModel.cs" />
