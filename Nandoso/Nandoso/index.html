@@ -3,8 +3,10 @@
 <head>
     <title>Nandoso</title>
     <meta charset="utf-8" />
-    <script src="Scripts/jquery-1.9.1.min.js"></script>
+    <script src="Scripts/jquery-2.1.4.min.js"></script>
     <script src="Scripts/bootstrap.min.js"></script>
+    <script src="Scripts/MenuModule.js"></script>
+    <script src="Scripts/Menu.js"></script>
     <link href="Content/bootstrap.min.css" rel="stylesheet" />
     <link href="Content/Style.css" rel="stylesheet" />
 </head>
@@ -23,15 +25,26 @@
             <div class="container-fluid">
                 <div>
                     <a href="specials.html" class="navbar-brand">Specials</a>
-                    <a href="forums.html" class="navbar-brand">Provide Feedback</a>
+                    <a href="feedback.html" class="navbar-brand">Provide Feedback</a>
                     <a href="liveChat.html" class="navbar-brand">Live Chat</a>
                 </div>
             </div>
         </nav>
     </div>
-    <p>
-        Nandoso is an international casual dining restaurant chain, operated by franchisees, that specializes in flame-grilled chicken.
-    <p>
+    <div>
+        <p>
+            Nandoso is an international casual dining restaurant chain, operated by franchisees, that specializes in flame-grilled chicken.
+        <p>
+        <table class="table table-striped space-table">
+            <thead>
+                <tr>
+                    <th> Item </th>
+                    <th> Price</th>
+                </tr>
+            </thead>
+            <tbody id="MenuList"></tbody>
+        </table>
+    </div>
 
 </body>
 </html>
