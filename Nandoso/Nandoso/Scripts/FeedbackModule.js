@@ -10,7 +10,7 @@
             $.ajax({
                 type: "GET",
                 dataType: "json",
-                url: "http://localhost:2480/api/ForumPosts",
+                url: "http://nandoso-suraj.azurewebsites.net/api/ForumPosts",
                 success: function (data) {
                     callback(data);
                 }
@@ -22,7 +22,7 @@
 function postFeedback(callback , postData) {
     $.ajax({
         type: "POST",
-        url: "http://localhost:2480/api/ForumPosts",
+        url: "http://nandoso-suraj.azurewebsites.net/api/ForumPosts",
         data: JSON.stringify(postData),
         dataType: "json",
         contentType: 'application/json',

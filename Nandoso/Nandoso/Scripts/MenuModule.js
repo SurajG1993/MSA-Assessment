@@ -8,7 +8,7 @@
             $.ajax({
                 type: "GET",
                 dataType: "json",
-                url: "http://localhost:2480/api/MenuModels",
+                url: "http://nandoso-suraj.azurewebsites.net/api/MenuModels",
                 success: function (data) {
                     callback(data);
                 }

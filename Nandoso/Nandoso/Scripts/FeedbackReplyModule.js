@@ -6,7 +6,7 @@
             $.ajax({
                 type: "GET",
                 dataType: "json",
-                url: "http://localhost:2480/api/ForumReplies",
+                url: "http://nandoso-suraj.azurewebsites.net/api/ForumReplies",
                 success: function (data) {
                     callback(data, postID, row)
                 }
@@ -18,7 +18,7 @@
 function postReply(callback , postData) {
     $.ajax({
         type: "POST",
-        url: "http://localhost:2480/api/ForumReplies",
+        url: "http://nandoso-suraj.azurewebsites.net/api/ForumReplies",
         data: JSON.stringify(postData),
         dataType: "json",
         contentType: 'application/json',

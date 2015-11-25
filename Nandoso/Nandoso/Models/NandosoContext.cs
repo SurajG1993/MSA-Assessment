@@ -7,6 +7,7 @@ using System.Web;
 
 namespace Nandoso.Models
 {
+    [DbConfigurationType(typeof(MySql.Data.Entity.MySqlEFConfiguration))]
     public class NandosoContext : DbContext
     {
         // You can add custom code to this file. Changes will not be overwritten.

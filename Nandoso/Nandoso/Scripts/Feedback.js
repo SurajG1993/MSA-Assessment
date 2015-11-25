@@ -37,12 +37,17 @@ function setupFeedbackTable(FeedbackList) {
         var viewRepliesCol = document.createElement("button");
         viewRepliesCol.innerHTML = "View Replies"
         viewRepliesCol.setAttribute("id", FeedbackList[i].id);
-        viewRepliesCol.setAttribute("onclick", "storeFeedBackPost(this.id)")
+        viewRepliesCol.setAttribute("onclick", "goToReplyPage(this.id)")
         row.appendChild(viewRepliesCol);
         MenuTable.appendChild(row);
     }
 }
 
+function goToReplyPage(buttonID) {
+    sessionStorage.setItem("postID", buttonID);
+    window.location.href = "replies.html";
+}
+/*
 function storeFeedBackPost(buttonID) {
     console.log(buttonID);
     if (typeof (Storage) !== "undefined") {
@@ -63,6 +68,7 @@ function storeFeedBackPost(buttonID) {
         document.getElementById("result").innerHTML = "Sorry, your browser does not support web storage...";
     }
 }
+*/
 
 function checkValidPost() {
     var TextAreaMessage = document.getElementById("FeedbackText").value;
