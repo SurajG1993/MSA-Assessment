@@ -7,12 +7,13 @@
     <script src="Scripts/bootstrap.min.js"></script>
     <script src="Scripts/FeedbackReplyModule.js"></script>
     <script src="Scripts/FeedbackReply.js"></script>
+    <script src="Scripts/Facebook.js"></script>
     <link href="Content/bootstrap.min.css" rel="stylesheet" />
     <link href="Content/Style.css" rel="stylesheet" />
 </head>
 <body>
     <div class="backgroundWall">
-        <img src="Images/Chicken.jpg" height="100%" width="100%" />
+        <img src="Images/Chicken.jpg" />
     </div>
     <div>
         <header>
@@ -34,8 +35,9 @@
         <p>
             Nandoso is an international casual dining restaurant chain, operated by franchisees, that specializes in flame-grilled chicken.
         <p>
-            <textarea id="FeedbackText" cols="100" rows="5"></textarea>
-            <button onclick="submitFeedback()">Reply</button>
+            <textarea id="ReplyText" cols="100" rows="5"></textarea>
+            <fb:login-button scope="public_profile,email" onlogin="checkLoginState(); checkValidPost();">Reply</fb:login-button>
+            <div id="status"style="opacity:0"></div>
             <table class="table table-striped space-table">
                 <thead>
                     <tr>

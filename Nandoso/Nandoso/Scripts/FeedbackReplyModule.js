@@ -1,7 +1,7 @@
 ﻿var FeedbackReplyModel = (function () {
     /* Only the variables from the return functions can be accessed via other JS. */
     return {
-        getFeedback: function (callback, postID, row) {
+        getReplies: function (callback, postID, row) {
             // Code for API calls goes here
             $.ajax({
                 type: "GET",
@@ -15,15 +15,15 @@
     }
 }());
 
-function postFeedback(callback , postData) {
+function postReply(callback , postData) {
     $.ajax({
         type: "POST",
-        url: "http://localhost:2480/api/ForumPosts",
+        url: "http://localhost:2480/api/ForumReplies",
         data: JSON.stringify(postData),
         dataType: "json",
         contentType: 'application/json',
         success: function (data) {
-            callback(data)
+            callback(data,postData.postID)
         }
     });
 }

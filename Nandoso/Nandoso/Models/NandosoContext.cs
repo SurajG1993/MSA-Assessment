@@ -42,14 +42,21 @@ namespace Nandoso.Models
 
                 var feedback = new List<ForumPost>
                 {
-                    new ForumPost { userName = "Surage", post="The the quarter chicken is awesome !!!"}
+                    new ForumPost { userName = "Suraj", post="The the quarter chicken is awesome !!!"},
+                    new ForumPost { userName = "MSA-1", post="The Best flame grilled Resturant Ever :) "},
+                    new ForumPost { userName = "MSA-2", post="The chicken was amazing"},
                 };
                 feedback.ForEach(s => context.ForumPosts.AddOrUpdate(p => p.post, s));
                 context.SaveChanges();
 
                 var ForumReply = new List<ForumReplies>
                 {
-                    new ForumReplies { userName = "Random", reply="I agree !!!!", postID=1} 
+                    new ForumReplies { userName = "Random", reply="I agree !!!!", postID=1},
+                    new ForumReplies { userName = "Random", reply="Awsome Chicken indeed", postID=1},
+                    new ForumReplies { userName = "Random", reply="Agreed", postID=2},
+                    new ForumReplies { userName = "Random", reply="Right on", postID=2},
+                    new ForumReplies { userName = "Random", reply="Amazing resturant", postID=3},
+                    new ForumReplies { userName = "Random", reply="I agree !!!!", postID=3}
                 };
                 ForumReply.ForEach(s => context.ForumReplies.AddOrUpdate(p => p.reply, s));
                 context.SaveChanges();

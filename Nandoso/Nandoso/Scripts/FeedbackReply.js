@@ -5,18 +5,24 @@
 
 function submitReply() {
     var postData = {
-        "userName":"Suraj",
-        "post":document.getElementById("FeedbackText").value
+        "userName": getFacebookUserName(),
+        "reply": document.getElementById("ReplyText").value,
+        "postID": getPostID()
     }
-    postFeedback(getFeedback, postData);
+    console.log(postData.postID);
+    postReply(getReplies, postData);
 }
 
 function getReplies(postID) {
-    FeedbackReplyModel.getFeedback(setupFeedbackReplyTable, postID);
+    storePostID(parseInt(postID));
+    console.log("getting replies")
+    FeedbackReplyModel.getReplies(setupFeedbackReplyTable, postID);
 }
 
 function setupFeedbackReplyTable(ReplyList, postID) {
     var MenuTable = document.getElementById("ReplyList");
+    MenuTable.innerHTML = null;
+    console.log("populating data")
     for (i = ReplyList.length - 1; i >= 0; i--) {
         if (postID == ReplyList[i].postID) {
             var row = document.createElement("tr");
@@ -33,3 +39,19 @@ function setupFeedbackReplyTable(ReplyList, postID) {
     }
 }
 
+function checkValidPost() {
+    var TextAreaMessage = document.getElementById("ReplyText").value;
+    if (TextAreaMessage.length !== 0 && getFacebookUserName() !== null) {
+        submitReply();
+    } else {
+        alert("Error : Reply is blank")
+    }
+}
+
+function storePostID(postID) {
+    sessionStorage.setItem("postID",postID);
+}
+
+function getPostID() {
+    return  sessionStorage.getItem("postID");
+}

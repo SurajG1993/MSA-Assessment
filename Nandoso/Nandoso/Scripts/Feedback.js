@@ -6,10 +6,12 @@ document.addEventListener("DOMContentLoaded", function () {
 
 function submitFeedback() {
     var postData = {
-        "userName":"Suraj",
+        "userName": getFacebookUserName(),
         "post":document.getElementById("FeedbackText").value
     }
+    console.log(postData);
     postFeedback(getFeedback, postData);
+    document.getElementById("FeedbackText").value = null;
 }
 
 function getFeedback() {
@@ -33,7 +35,7 @@ function setupFeedbackTable(FeedbackList) {
         row.appendChild(postCol);
 
         var viewRepliesCol = document.createElement("button");
-        viewRepliesCol.innerHTML = "Hello"
+        viewRepliesCol.innerHTML = "View Replies"
         viewRepliesCol.setAttribute("id", FeedbackList[i].id);
         viewRepliesCol.setAttribute("onclick", "storeFeedBackPost(this.id)")
         row.appendChild(viewRepliesCol);
@@ -59,5 +61,14 @@ function storeFeedBackPost(buttonID) {
 
     } else {
         document.getElementById("result").innerHTML = "Sorry, your browser does not support web storage...";
+    }
+}
+
+function checkValidPost() {
+    var TextAreaMessage = document.getElementById("FeedbackText").value;
+    if (TextAreaMessage.length !== 0 && getFacebookUserName() !== null) {
+        submitFeedback();
+    } else {
+        alert("Error : Post is blank")
     }
 }
