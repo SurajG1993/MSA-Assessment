@@ -9,20 +9,20 @@ function submitReply() {
         "reply": document.getElementById("ReplyText").value,
         "postID": getPostID()
     }
-    console.log(postData.postID);
-    postReply(getReplies, postData);
+    postReply(getReplies, postData)
 }
 
 function getReplies(postID) {
-    storePostID(parseInt(postID));
-    console.log("getting replies")
+    storePostID(postID)
+    console.log("getting replies" + getPostID())
     FeedbackReplyModel.getReplies(setupFeedbackReplyTable, postID);
 }
 
 function setupFeedbackReplyTable(ReplyList, postID) {
     var MenuTable = document.getElementById("ReplyList");
     MenuTable.innerHTML = null;
-    console.log("populating data")
+    console.log("populating data " + ReplyList.length);
+    console.log("postID : " + postID);
     for (i = ReplyList.length - 1; i >= 0; i--) {
         if (postID == ReplyList[i].postID) {
             var row = document.createElement("tr");

@@ -23,7 +23,8 @@ function postReply(callback , postData) {
         dataType: "json",
         contentType: 'application/json',
         success: function (data) {
-            callback(data,postData.postID)
+            console.log("postID for callback " + postData.postID);
+            callback(postData.postID)
         }
     });
 }
