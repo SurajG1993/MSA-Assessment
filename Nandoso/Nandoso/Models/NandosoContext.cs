@@ -38,7 +38,6 @@ namespace Nandoso.Models
                     new MenuModel { itemName = "Portuguese Paella", itemPrice = 6.90f},
                     new MenuModel { itemName = "8 BBQ Ribs", itemPrice = 11.90f},
                     new MenuModel { itemName = "5 BBQ Wings", itemPrice = 11.90f},
-                    new MenuModel { itemName = "5 BBQ Wings", itemPrice = 10.90f},
 
                 };
                 Menu.ForEach(s => context.MenuModels.AddOrUpdate(p => p.itemPrice, s));
