@@ -142,6 +142,7 @@
     <Content Include="feedback.html" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
+    <Content Include="ContactUs.html" />
     <Content Include="Images\Chicken.jpg" />
     <Content Include="index.html" />
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />

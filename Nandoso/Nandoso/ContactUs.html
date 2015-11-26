@@ -5,29 +5,28 @@
     <meta charset="utf-8" />
     <script src="Scripts/jquery-2.1.4.min.js"></script>
     <script src="Scripts/bootstrap.min.js"></script>
-    <script src="Scripts/FeedbackReplyModule.js"></script>
-    <script src="Scripts/FeedbackReply.js"></script>
-    <script src="Scripts/Facebook.js"></script>
+    <script src="Scripts/MenuModule.js"></script>
+    <script src="Scripts/Menu.js"></script>
     <link href="Content/bootstrap.min.css" rel="stylesheet" />
     <link href="Content/Style.css" rel="stylesheet" />
 </head>
 <body>
     <div class="backgroundWall">
-        <img src="Images/Chicken.jpg" />
+        <img src="Images/Chicken.jpg"" />
     </div>
     <div>
         <header>
             <h1 align="center">Nandoso</h1>
         </header>
     </div>
+
     <div>
         <nav class="navbar navbar-inverse">
             <div class="container-fluid">
                 <div>
                     <a href="index.html" class="navbar-brand">Home</a>
                     <a href="specials.html" class="navbar-brand">Specials</a>
-                    <a href="feedback.html" class="navbar-brand">Feedbacks</a>
-                    <a href="ContactUs.html" class="navbar-brand">Contact Us</a>
+                    <a href="feedback.html" class="navbar-brand">Provide Feedback</a>
                     <a href="liveChat.html" class="navbar-brand">Live Chat</a>
                 </div>
             </div>
@@ -37,18 +36,24 @@
         <p>
             Nandoso is an international casual dining restaurant chain, operated by franchisees, that specializes in flame-grilled chicken.
         <p>
-            <textarea id="ReplyText" cols="100" rows="5"></textarea>
-            <fb:login-button scope="public_profile,email" onlogin="checkLoginState(); checkValidPost();">Reply</fb:login-button>
-            <div id="status"style="opacity:0"></div>
             <table class="table table-striped space-table">
                 <thead>
                     <tr>
-                        <th> Name </th>
-                        <th> Message</th>
+                        <th> Phone Number </th>
+                        <th> Email </th>
+                        <th>Address</th>
+                        <th>Working Hours</th>
                     </tr>
                 </thead>
-                <tbody id="ReplyList"></tbody>
+                    <tr>
+                        <td>6894823</td>
+                        <td>nandoso@windowslive.com</td>
+                        <td>Mt Eden, Nandoso Street</td>
+                        <td> 10am to 10 pm, 7 Days a week</td>
+                    </tr>
+                <tbody id="MenuList"></tbody>
             </table>
     </div>
+
 </body>
 </html>

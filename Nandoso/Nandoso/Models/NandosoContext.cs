@@ -25,7 +25,7 @@ namespace Nandoso.Models
                 this.AutomaticMigrationDataLossAllowed = true;
             }
 
-            protected override void Seed(NandosoContext context)
+                                   protected override void Seed(NandosoContext context)
             {
                 var Menu = new List<MenuModel>
                 {
