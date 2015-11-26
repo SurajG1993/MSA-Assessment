@@ -29,7 +29,17 @@ namespace Nandoso.Models
             {
                 var Menu = new List<MenuModel>
                 {
-                    new MenuModel { itemName = "Quarter Chicken", itemPrice = 8.90f}
+                    new MenuModel { itemName = "Quarter Chicken", itemPrice = 8.90f},
+                    new MenuModel { itemName = "Quarter Chicken & Regular sides", itemPrice = 12.90f},
+                    new MenuModel { itemName = "Half Chicken", itemPrice = 12.90f},
+                    new MenuModel { itemName = "5 Grilled Tenderloins", itemPrice = 11.90f},
+                    new MenuModel { itemName = "Portuguese Chicken Skewer", itemPrice = 13.90f},
+                    new MenuModel { itemName = "Grilled Livers", itemPrice = 15.90f},
+                    new MenuModel { itemName = "Portuguese Paella", itemPrice = 6.90f},
+                    new MenuModel { itemName = "8 BBQ Ribs", itemPrice = 11.90f},
+                    new MenuModel { itemName = "5 BBQ Wings", itemPrice = 11.90f},
+                    new MenuModel { itemName = "5 BBQ Wings", itemPrice = 10.90f},
+
                 };
                 Menu.ForEach(s => context.MenuModels.AddOrUpdate(p => p.itemPrice, s));
                 context.SaveChanges();
@@ -52,12 +62,8 @@ namespace Nandoso.Models
 
                 var ForumReply = new List<ForumReplies>
                 {
-                    new ForumReplies { userName = "Random", reply="I agree !!!!", postID=1},
-                    new ForumReplies { userName = "Random", reply="Awsome Chicken indeed", postID=1},
-                    new ForumReplies { userName = "Random", reply="Agreed", postID=2},
-                    new ForumReplies { userName = "Random", reply="Right on", postID=2},
-                    new ForumReplies { userName = "Random", reply="Amazing resturant", postID=3},
-                    new ForumReplies { userName = "Random", reply="I agree !!!!", postID=3}
+                    new ForumReplies { userName = "MSA-1", reply="I agree !!!!", postID=1},
+                    new ForumReplies { userName = "MSA-2", reply="Awsome Chicken indeed", postID=1},
                 };
                 ForumReply.ForEach(s => context.ForumReplies.AddOrUpdate(p => p.reply, s));
                 context.SaveChanges();
